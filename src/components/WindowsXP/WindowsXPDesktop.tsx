@@ -65,19 +65,13 @@ export const WindowsXPDesktop = () => {
         y={100}
       >
         <div className="font-mono text-sm">
-          <p className="mb-4">Sofia,</p>
           <p className="mb-4">
-            Não esqueça da reunião com o editor-chefe amanhã às 14h.
-            Leve todas as evidências sobre o caso que estamos investigando.
+            Se algo acontecer comigo, vá até 'CONFIDENCIAL_SOFIA'. A verdade está lá.
           </p>
           <p className="mb-4">
-            Os documentos estão na pasta CONFIDENCIAL_SOFIA.
-            Cuidado com quem você confia essas informações.
+            Não confie em ninguém da redação.
           </p>
-          <p className="mb-4">
-            A verdade sempre vem à tona.
-          </p>
-          <p>- M.</p>
+          <p>— Sofia</p>
         </div>
       </WindowXP>
 
@@ -91,29 +85,44 @@ export const WindowsXPDesktop = () => {
         y={150}
       >
         <div>
-          <h3 className="font-bold text-lg mb-4 text-red-600">PASTA CONFIDENCIAL</h3>
-          <div className="space-y-4">
-            <div className="border-l-4 border-red-500 pl-4">
-              <h4 className="font-bold">Investigação: Caso Empresário</h4>
-              <p className="text-sm mt-2">
-                Evidências coletadas sobre esquema de corrupção envolvendo 
-                contratos públicos. Documentos fiscais, gravações de áudio 
-                e depoimentos de testemunhas.
-              </p>
+          <h3 className="font-bold text-lg mb-4 text-red-600">🗂️ CONFIDENCIAL_SOFIA</h3>
+          <div className="space-y-3">
+            <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
+              <img src={txtIcon} alt="Arquivo" className="w-4 h-4" />
+              <span className="text-sm font-bold">01_RM_06_JUN.txt</span>
             </div>
-            <div className="border-l-4 border-yellow-500 pl-4">
-              <h4 className="font-bold">Fontes Protegidas</h4>
-              <p className="text-sm mt-2">
-                Lista de contatos que forneceram informações sensíveis.
-                Identidades protegidas sob sigilo jornalístico.
-              </p>
+            <div className="bg-gray-50 p-3 text-xs font-mono border rounded">
+              <p className="mb-2"><strong>Douglas P.</strong> aparece em 3 contratos com a Secretaria de Esporte — total estimado: <strong>R$ 240.000,00</strong>.</p>
+              <p className="mb-2">Data: 04/04 — assinatura sem licitação.</p>
+              <p className="mb-2">Fonte: cruzamento entre portais de transparência e PDFs internos.</p>
+              <p className="mb-2 text-red-600"><strong>C. Braga</strong> avisou: "tem gente perigosa nesse meio".</p>
+              <p className="mb-2 text-red-600"><strong>L. Paiva</strong> sugeriu deletar o material antes da publicação.</p>
+              <p className="text-red-600">Backup desativado manualmente. Última cópia segura: pen drive vermelho (sumido).</p>
             </div>
-            <div className="border-l-4 border-blue-500 pl-4">
-              <h4 className="font-bold">Cronologia dos Fatos</h4>
-              <p className="text-sm mt-2">
-                Timeline detalhada dos eventos de janeiro a dezembro de 2024.
-                Inclui datas, locais e pessoas envolvidas.
-              </p>
+            
+            <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
+              <img src={txtIcon} alt="Arquivo" className="w-4 h-4" />
+              <span className="text-sm font-bold">02_Nota_Pessoal.txt</span>
+            </div>
+            <div className="bg-gray-50 p-3 text-xs font-mono border rounded">
+              <p className="mb-2">Camila disse que o material era perigoso demais.</p>
+              <p className="mb-2">Luís pediu para apagar tudo antes da publicação.</p>
+              <p className="mb-2">Backup desativado por segurança. Preciso confiar em alguém.</p>
+              <p className="mb-2 text-red-600"><strong>Não estou segura.</strong></p>
+              <p className="mb-2">Se eu não conseguir publicar…</p>
+              <p className="text-red-600"><strong>Alguém precisa continuar isso.</strong></p>
+            </div>
+
+            <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
+              <span className="text-sm">🔊</span>
+              <span className="text-sm font-bold">AVISO_06_JUN.wav</span>
+            </div>
+            <div className="bg-red-50 p-3 text-xs border rounded border-red-300">
+              <p className="mb-2 font-bold text-red-600">Transcrição de áudio:</p>
+              <p className="mb-2 italic">"Você já passou dos limites. Apague tudo. Senão, vai acabar como aquela repórter do sul."</p>
+              <p className="mb-1 text-red-600">Metadados ausentes.</p>
+              <p className="mb-1 text-red-600">Horário de criação: 02h47 da madrugada da morte de Sofia</p>
+              <p className="text-red-600">IP logado no e-mail: não corresponde à rede da casa</p>
             </div>
           </div>
         </div>
@@ -181,18 +190,30 @@ export const WindowsXPDesktop = () => {
             <h3 className="font-bold">Lixeira</h3>
           </div>
           <div className="border border-gray-300 p-4 bg-gray-50 min-h-48">
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer">
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
                 <img src={txtIcon} alt="Arquivo" className="w-4 h-4" />
-                <span className="text-sm">rascunho_artigo_old.txt</span>
+                <span className="text-sm font-bold">rascunho_desabafo.txt</span>
               </div>
-              <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer">
-                <img src={folderIcon} alt="Pasta" className="w-4 h-4" />
-                <span className="text-sm">backup_antigo</span>
+              <div className="bg-gray-100 p-2 text-xs font-mono border rounded">
+                "Estou com medo. Tem gente envolvida que eu nunca imaginaria. Não é só o Douglas. Alguém mais quer calar essa história."
               </div>
-              <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer">
-                <img src={wordIcon} alt="Word" className="w-4 h-4" />
-                <span className="text-sm">entrevista_cancelada.doc</span>
+              
+              <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
+                <span className="text-sm">🖼️</span>
+                <span className="text-sm font-bold">print_email_ameaça.png</span>
+              </div>
+              <div className="bg-red-50 p-2 text-xs border rounded border-red-300">
+                <p className="text-red-600 font-bold">Assunto: PARE ENQUANTO É TEMPO</p>
+                <p className="text-gray-600 italic">[Imagem desfocada - conteúdo ilegível]</p>
+              </div>
+
+              <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
+                <img src={txtIcon} alt="Arquivo" className="w-4 h-4" />
+                <span className="text-sm font-bold">carta_nao_enviada.txt</span>
+              </div>
+              <div className="bg-gray-100 p-2 text-xs font-mono border rounded">
+                "Camila, se você estiver me enganando… espero que entenda que eu só queria a verdade."
               </div>
             </div>
           </div>
@@ -216,28 +237,31 @@ export const WindowsXPDesktop = () => {
             <img src={folderIcon} alt="Pasta" className="w-8 h-8" />
             <h3 className="font-bold">Pasta Pessoal</h3>
           </div>
-          <div className="space-y-4">
-            <div className="border-l-4 border-green-500 pl-4">
-              <h4 className="font-bold">Sobre Sofia</h4>
-              <p className="text-sm mt-2">
-                Jornalista investigativa com 8 anos de experiência. 
-                Especializada em casos de corrupção e transparência pública.
-                Prêmio Nacional de Jornalismo Investigativo 2023.
-              </p>
+          <div className="space-y-3">
+            <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
+              <img src={txtIcon} alt="Arquivo" className="w-4 h-4" />
+              <span className="text-sm font-bold">diario_abril.txt</span>
             </div>
-            <div className="border-l-4 border-purple-500 pl-4">
-              <h4 className="font-bold">Hobbies</h4>
-              <p className="text-sm mt-2">
-                Fotografia, leitura de romances policiais, 
-                caminhadas no parque e colecionar plantas suculentas.
-              </p>
+            <div className="bg-gray-50 p-3 text-xs font-mono border rounded">
+              "Ricardo me ligou de novo. Disse que sente falta, mas eu não acredito mais. Ele ficou estranho desde que comecei a investigar."
             </div>
-            <div className="border-l-4 border-orange-500 pl-4">
-              <h4 className="font-bold">Filosofia de Trabalho</h4>
-              <p className="text-sm mt-2">
-                "O jornalismo é a primeira versão da história. 
-                Nossa responsabilidade é garantir que seja precisa e justa."
-              </p>
+
+            <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
+              <span className="text-sm">📷</span>
+              <span className="text-sm font-bold">foto_sofia_camila.png</span>
+            </div>
+            <div className="bg-blue-50 p-3 text-xs border rounded border-blue-300">
+              <p className="text-blue-600 italic">Imagem de Sofia e Camila sorrindo na redação</p>
+              <p className="text-gray-600 text-xs mt-1">[Pode contrastar com a desconfiança futura]</p>
+            </div>
+
+            <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
+              <img src={txtIcon} alt="Arquivo" className="w-4 h-4" />
+              <span className="text-sm font-bold">nota_de_mesa.txt</span>
+            </div>
+            <div className="bg-gray-50 p-3 text-xs font-mono border rounded">
+              "Lúcia cancelou o almoço. Disse que estava gripada, mas parecia nervosa ontem."
+              <p className="text-red-600 text-xs mt-1">⚠️ Sugere algo sobre a irmã</p>
             </div>
           </div>
         </div>
