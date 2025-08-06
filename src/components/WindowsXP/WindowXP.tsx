@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface WindowXPProps {
   title: string;
@@ -46,11 +46,26 @@ export const WindowXP = ({
     setIsDragging(false);
   };
 
-  // Add event listeners for dragging
-  if (isDragging) {
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
-  }
+  // Properly manage event listeners with useEffect
+  useEffect(() => {
+    if (isDragging) {
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+      
+      return () => {
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseup', handleMouseUp);
+      };
+    }
+  }, [isDragging, dragOffset]);
+
+  // Reset position when window is reopened
+  useEffect(() => {
+    if (isOpen) {
+      setPosition({ x, y });
+      setIsDragging(false);
+    }
+  }, [isOpen, x, y]);
 
   if (!isOpen) return null;
 
