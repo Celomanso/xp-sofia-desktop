@@ -97,9 +97,9 @@ export const WindowsXPDesktop = () => {
         x={200}
         y={150}
       >
-        <div>
+        <div className="h-full overflow-y-auto">
           <h3 className="font-bold text-lg mb-4 text-red-600">🗂️ CONFIDENCIAL_SOFIA</h3>
-          <div className="space-y-3">
+          <div className="space-y-3 pr-2">
             <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
               <img src={txtIcon} alt="Arquivo" className="w-4 h-4" />
               <span className="text-sm font-bold">01_RM_06_JUN.txt</span>
