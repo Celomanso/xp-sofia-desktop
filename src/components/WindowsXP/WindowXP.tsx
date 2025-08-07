@@ -21,6 +21,8 @@ export const WindowXP = ({
   x = 100,
   y = 100 
 }: WindowXPProps) => {
+  // Mobile detection
+  const isMobile = window.innerWidth < 768;
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [position, setPosition] = useState({ x, y });
@@ -73,38 +75,44 @@ export const WindowXP = ({
     <div 
       className="xp-window fixed z-50"
       style={{ 
-        left: position.x,
-        top: position.y,
-        width,
-        height,
-        minWidth: 250,
-        minHeight: 150
+        left: isMobile ? 10 : position.x,
+        top: isMobile ? 10 : position.y,
+        width: isMobile ? 'calc(100vw - 20px)' : width,
+        height: isMobile ? 'calc(100vh - 20px)' : height,
+        minWidth: isMobile ? 'auto' : 250,
+        minHeight: isMobile ? 'auto' : 150,
+        maxWidth: isMobile ? '100vw' : 'none',
+        maxHeight: isMobile ? '100vh' : 'none'
       }}
     >
       {/* Title Bar */}
       <div 
-        className="xp-titlebar flex items-center justify-between px-2 py-1 cursor-move"
-        onMouseDown={handleMouseDown}
+        className={`xp-titlebar flex items-center justify-between px-2 py-1 ${isMobile ? 'cursor-default' : 'cursor-move'}`}
+        onMouseDown={isMobile ? undefined : handleMouseDown}
       >
-        <span className="flex items-center gap-1">
+        <span className={`flex items-center gap-1 ${isMobile ? 'text-sm' : ''}`}>
           <div className="w-4 h-4 bg-white/20 rounded"></div>
           {title}
         </span>
         <div className="flex gap-1">
+          {!isMobile && (
+            <>
+              <button 
+                className="xp-button w-4 h-4 text-xs leading-none"
+                title="Minimizar"
+              >
+                _
+              </button>
+              <button 
+                className="xp-button w-4 h-4 text-xs leading-none"
+                title="Maximizar"
+              >
+                □
+              </button>
+            </>
+          )}
           <button 
-            className="xp-button w-4 h-4 text-xs leading-none"
-            title="Minimizar"
-          >
-            _
-          </button>
-          <button 
-            className="xp-button w-4 h-4 text-xs leading-none"
-            title="Maximizar"
-          >
-            □
-          </button>
-          <button 
-            className="xp-close-button w-4 h-4 text-xs leading-none"
+            className={`xp-close-button ${isMobile ? 'w-6 h-6 text-sm' : 'w-4 h-4 text-xs'} leading-none`}
             onClick={onClose}
             title="Fechar"
           >
@@ -114,7 +122,7 @@ export const WindowXP = ({
       </div>
 
       {/* Content Area */}
-      <div className="flex-1 p-3 overflow-auto bg-white text-black text-sm">
+      <div className={`flex-1 p-3 overflow-auto bg-white text-black ${isMobile ? 'text-base' : 'text-sm'}`}>
         {children}
       </div>
     </div>

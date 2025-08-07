@@ -32,7 +32,7 @@ export const WindowsXPDesktop = () => {
       {/* Desktop Icons */}
       <div className="absolute inset-0 p-4">
         {/* Bilhete.txt no canto superior direito */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-4 right-4 sm:right-4 right-2">
           <DesktopIcon
             icon={txtIcon}
             title="Bilhete.txt"
@@ -41,7 +41,7 @@ export const WindowsXPDesktop = () => {
         </div>
         
         {/* Outros ícones no canto esquerdo */}
-        <div className="grid grid-cols-1 gap-4 w-fit">
+        <div className="grid grid-cols-1 gap-4 w-fit sm:gap-4 gap-2">
           {bilheteAberto && (
             <DesktopIcon
               icon={folderIcon}
