@@ -97,8 +97,8 @@ export const WindowsXPDesktop = () => {
         x={200}
         y={150}
       >
-        <div className="h-full overflow-y-auto">
-          <h3 className="font-bold text-lg mb-4 text-red-600">🗂️ CONFIDENCIAL_SOFIA</h3>
+        <div className="h-full max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+          <h3 className="font-bold text-lg mb-4 text-red-600 sticky top-0 bg-white">🗂️ CONFIDENCIAL_SOFIA</h3>
           <div className="space-y-3 pr-2">
             <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
               <img src={txtIcon} alt="Arquivo" className="w-4 h-4" />
