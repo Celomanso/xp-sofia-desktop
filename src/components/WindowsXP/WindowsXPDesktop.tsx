@@ -265,7 +265,6 @@ export const WindowsXPDesktop = () => {
             </div>
             <div className="bg-blue-50 p-3 text-xs border rounded border-blue-300">
               <p className="text-blue-600 italic">Imagem de Sofia e Camila sorrindo na redação</p>
-              <p className="text-gray-600 text-xs mt-1">[Pode contrastar com a desconfiança futura]</p>
             </div>
 
             <div className="flex items-center gap-2 p-2 hover:bg-blue-100 cursor-pointer border rounded">
@@ -274,7 +273,6 @@ export const WindowsXPDesktop = () => {
             </div>
             <div className="bg-gray-50 p-3 text-xs font-mono border rounded">
               "Lúcia cancelou o almoço. Disse que estava gripada, mas parecia nervosa ontem."
-              <p className="text-red-600 text-xs mt-1">⚠️ Sugere algo sobre a irmã</p>
             </div>
           </div>
         </div>
