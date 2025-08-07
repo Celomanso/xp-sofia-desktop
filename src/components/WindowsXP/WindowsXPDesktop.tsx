@@ -31,12 +31,17 @@ export const WindowsXPDesktop = () => {
     >
       {/* Desktop Icons */}
       <div className="absolute inset-0 p-4">
-        <div className="grid grid-cols-1 gap-4 w-fit">
+        {/* Bilhete.txt no canto superior direito */}
+        <div className="absolute top-4 right-4">
           <DesktopIcon
             icon={txtIcon}
             title="Bilhete.txt"
             onClick={() => openWindow('bilhete')}
           />
+        </div>
+        
+        {/* Outros ícones no canto esquerdo */}
+        <div className="grid grid-cols-1 gap-4 w-fit">
           {bilheteAberto && (
             <DesktopIcon
               icon={folderIcon}
@@ -153,7 +158,7 @@ export const WindowsXPDesktop = () => {
             <h2 className="text-xl font-bold text-center">
               ARTIGO: "A VERDADE POR TRÁS DOS CONTRATOS"
             </h2>
-            <p className="text-sm italic text-center">Por Sofia Oliveira - Jornalista Investigativa</p>
+            <p className="text-sm italic text-center">Por Sofia Bittencourt - Jornalista Investigativa</p>
             
             <div className="space-y-3 mt-6">
               <p>
