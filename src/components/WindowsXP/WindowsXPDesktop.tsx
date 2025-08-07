@@ -9,9 +9,15 @@ import recycleBinIcon from "@/assets/recycle-bin-icon.png";
 
 export const WindowsXPDesktop = () => {
   const [openWindows, setOpenWindows] = useState<Record<string, boolean>>({});
+  const [bilheteAberto, setBilheteAberto] = useState(false);
 
   const openWindow = (windowId: string) => {
     setOpenWindows(prev => ({ ...prev, [windowId]: true }));
+    
+    // Se abrir o bilhete, marcar como aberto para revelar a pasta CONFIDENCIAL_SOFIA
+    if (windowId === 'bilhete' && !bilheteAberto) {
+      setBilheteAberto(true);
+    }
   };
 
   const closeWindow = (windowId: string) => {
@@ -31,11 +37,13 @@ export const WindowsXPDesktop = () => {
             title="Bilhete.txt"
             onClick={() => openWindow('bilhete')}
           />
-          <DesktopIcon
-            icon={folderIcon}
-            title="CONFIDENCIAL_SOFIA"
-            onClick={() => openWindow('confidencial')}
-          />
+          {bilheteAberto && (
+            <DesktopIcon
+              icon={folderIcon}
+              title="CONFIDENCIAL_SOFIA"
+              onClick={() => openWindow('confidencial')}
+            />
+          )}
           <DesktopIcon
             icon={wordIcon}
             title="doc.doc"
