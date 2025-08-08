@@ -272,7 +272,7 @@ export const WindowsXPDesktop = () => {
               <span className="text-sm font-bold">nota_de_mesa.txt</span>
             </div>
             <div className="bg-gray-50 p-3 text-xs font-mono border rounded">
-              "Lúcia cancelou o almoço. Disse que estava gripada, mas parecia nervosa ontem."
+              "Lúcia cancelou o almoço. Disse que estava gripada, mas parecia nervosa ontem quando me entregou o frasco de clonazepam"
             </div>
           </div>
         </div>
